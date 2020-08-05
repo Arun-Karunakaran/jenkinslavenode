@@ -22,14 +22,21 @@
 ::              3. Jenkins Server setup (A Master node inorder to connect with slave)
 ::
 :: Usage: configslavenodes.bat 
+:: Usage prompt:
+::              Username for Jenkins login? <username> 
+::              Password for Jenkins? <password>
+::              Mention the jenkins url you need to connect eg. http://<name>:8080? <http://jenkinsservername:8080>
+::              Tell the node name you want to create? <nodename>
+::              No of executors required? <1> or <2> or <n>
+::              Specify full path for configuring node? eg. C:\Users\admin\Documents=> <path>
 ::
 title ConfigJenkinsslavenodes
-set /p username=Username for Jenkins login?
-set /p password=Password for Jenkins?
-set /p URL=Mention the jenkins url you need to connect eg. http://^<name^>:8080?
-set /p nodename=Tell the node name you want to create?
-set /p executors=No of executors required?
-set /p outputdir=Specify the path for configuring node? eg. Users\admin\Documents=^>
+set /p username=Username for Jenkins login? 
+set /p password=Password for Jenkins? 
+set /p URL=Mention the jenkins url you need to connect eg. http://^<name^>:8080? 
+set /p nodename=Tell the node name you want to create? 
+set /p executors=No of executors required? 
+set /p outputdir=Specify full path for configuring node? eg. C:\Users\admin\Documents=^> 
 curl -u %username%:%password% %URL%/jnlpJars/agent.jar --output %outputdir%\agent.jar
 curl -u %username%:%password% %URL%/jnlpJars/jenkins-cli.jar --output %outputdir%\jenkins-cli.jar
 echo ^<?xml version="1.1" encoding="UTF-8"?^>^<slave^>^<name^>%nodename%^</name^>^<description^>^</description^>^<numExecutors^>%executors%^</numExecutors^>^<remoteFS^>%outputdir%^</remoteFS^>^<mode^>EXCLUSIVE^</mode^>^<retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/^>^<launcher class="hudson.slaves.JNLPLauncher"^>^<workDirSettings^>^<disabled^>false^</disabled^>^<internalDir^>remoting^</internalDir^>^<failIfWorkDirIsMissing^>false^</failIfWorkDirIsMissing^>^</workDirSettings^>^</launcher^>^<label^>%nodename%^</label^>^<nodeProperties/^>^</slave^> > %outputdir%\node.xml
@@ -54,3 +61,4 @@ curl -u %username%:%password% %URL%/jnlpJars/slave.jar --output %outputdir%\slav
 curl -u %username%:%password% %URL%/jnlpJars/jenkins-slave.exe --output %outputdir%\jenkins-slave.exe
 sleep 2
 start /WAIT /B %outputdir%\slave-agent.jnlp &&^
+sleep 10
