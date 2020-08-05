@@ -1,7 +1,29 @@
 @ECHO OFF
 @setlocal enableextensions
 @cd /d "%~dp0"
-title ConfigureJenkinsslavenodes
+::
+:: Name: configslavenodes.bat
+::
+:: Author: Arun Karunakaran
+::
+:: Origin: https://github.com/Arun-Karunakaran/devops.git
+:: 
+:: Func: This script will configure Jenkins slave node 
+::       based on the input provide by the user
+::       on any Windows platform.
+::       By running this command the user will be 
+::       able to create a jenkins slave node easily 
+::       on the remote/local VM without the interruption
+::       of the jenkins webconsole
+::
+:: Prerequisite:1. Need to be logged in to the remote/local VM
+::               to perform this setup
+::              2. jre1.8.0 as mimimum Java Runtime Environment
+::              3. Jenkins Server setup (A Master node inorder to connect with slave)
+::
+:: Usage: configslavenodes.bat 
+::
+title ConfigJenkinsslavenodes
 set /p username=Username for Jenkins login?
 set /p password=Password for Jenkins?
 set /p URL=Mention the jenkins url you need to connect eg. http://^<name^>:8080?
@@ -32,14 +54,3 @@ curl -u %username%:%password% %URL%/jnlpJars/slave.jar --output %outputdir%\slav
 curl -u %username%:%password% %URL%/jnlpJars/jenkins-slave.exe --output %outputdir%\jenkins-slave.exe
 sleep 2
 start /WAIT /B %outputdir%\slave-agent.jnlp &&^
-sleep 7
-REM sc create jenkinsslave binPath= "%outputdir%\jenkins-slave.exe" type= own start= auto error= normal DisplayName= jenkinsslave
-REM REG ADD HKLM\SYSTEM\CurrentControlSet\Services\jenkinsslave /v Description /t REG_SZ /d "This service runs an agent for Jenkins automation server."
-REM REG ADD HKLM\SYSTEM\CurrentControlSet\Services\jenkinsslave /v DisplayName /t REG_SZ /d "jenkinsslave"
-REM REG ADD HKLM\SYSTEM\CurrentControlSet\Services\jenkinsslave /v ImagePath /t REG_EXPAND_SZ /d "C:\Users\ingres\Documents\jenkins-slave.exe"
-REM REG DELETE HKLM\SYSTEM\CurrentControlSet\Control /v ServicesPipeTimeout
-REM REG ADD HKLM\SYSTEM\CurrentControlSet\Control /v ServicesPipeTimeout /t REG_DWORD /d 98304
-REM sleep 3
-REM sc start jenkinsslave
-
-
