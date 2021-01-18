@@ -14,11 +14,11 @@ Before doing this there are certain prerequisites that needs to be taken care, s
 
 **Let’s Automatize it:**<br />
 <br />
-	To instantly configure Jenkins slave nodes on your work node machine, run the configslavenodes.bat script on your work node.
+	To instantly configure Jenkins slave nodes on your work node machine, run the **configslavenodes.bat** script on your work node.
 
 **How to use it:**<br />
-- You can run the configslavenodes.bat script as the logged in user which will setup the remote machine over the Jenkins Server in a low elevated mode. 
-- You can run the configslavenodes.bat script in an elevated command windows which will setup the remote machine over the Jenkins Server to run with admin privileges.
+- You can run the **configslavenodes.bat** script as the logged in user which will setup the remote machine over the Jenkins Server in a low elevated mode. 
+- You can run the **configslavenodes.bat** script in an elevated command windows which will setup the remote machine over the Jenkins Server to run with admin privileges.
 
 > **Usage:** <br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; configslavenodes.bat <br /> <br />
