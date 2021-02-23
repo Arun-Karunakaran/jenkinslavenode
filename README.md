@@ -33,11 +33,11 @@ Before doing this there are certain prerequisites that needs to be taken care, s
 > &emsp; &emsp; &emsp; &emsp; &emsp; Specify full path for configuring node? _eg. C:\Users\admin\Documents=> <path>_ <br />
 
 **Logs:** <br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Java Console <br />
+```
 Java Web Start 11.251.2.08
 Using JRE version 1.8.0_251-b08 Java HotSpot(TM) Client VM
 JRE expiration date: 8/17/20 12:00 AM
-console.user.home = C:\Users\ingres
+console.user.home = C:\Users\admin
 ----------------------------------------------------
 c:   clear console window
 f:   finalize objects on finalization queue
@@ -58,12 +58,12 @@ INFO: Setting up agent: usaueatest
 Feb 23, 2021 7:50:23 AM hudson.remoting.Engine startEngine
 INFO: Using Remoting version: 3.40
 Feb 23, 2021 7:50:23 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
-INFO: Using C:\Users\ingres\Documents\remoting as a remoting work directory
+INFO: Using C:\Users\admin\Documents\remoting as a remoting work directory
 Feb 23, 2021 7:50:23 AM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
-INFO: Both error and output logs will be printed to C:\Users\ingres\Documents\remoting
+INFO: Both error and output logs will be printed to C:\Users\admin\Documents\remoting
 Feb 23, 2021 7:50:23 AM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
 INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
-
+```
 	
 **Pros of using the configslavenodes.bat:**
 1. User will be able to instantly setup Jenkins slave nodes anytime.
