@@ -19,7 +19,7 @@
 :: Prerequisite:1. Need to be logged in to the remote/local VM
 ::               to perform this setup
 ::              2. jre1.8.0 as mimimum Java Runtime Environment
-                3. jp2launcher.exe needs to be installed.
+::              3. Go to Control Panel-> Programs -> Java(double click)-> Java Control Panel (Advanced)-> JNLP File Association -> Change to always allow
 ::              4. Jenkins Server setup (A Master node inorder to connect with slave)
 ::
 :: Usage: configslavenodes.bat 
