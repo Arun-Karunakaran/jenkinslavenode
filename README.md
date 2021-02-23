@@ -4,7 +4,7 @@ Before doing this there are certain prerequisites that needs to be taken care, s
 >- ***Spinup node machine:*** Before adding a slave node to the Jenkins master we need to spinup and configure a slave node machine for performing the slave tasks.
 >- ***Java installation:*** We need to install Java on the slave node machine. Jenkins will install a client program on the slave node. To run the client program we need to install a Java version. 
 >- ***Need JRE 1.8.0 minimum to be installed on the slave node.***
->- ***Need jp2runner.exe to be installed.***
+>- ***Need jp2launcher.exe to be installed.***
 
 **Manual Steps for configuring slave node:**<br />
 - Log in to the Jenkins console via the browser and click on “Manage Jenkins” and scroll down to the bottom.
