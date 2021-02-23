@@ -32,8 +32,8 @@ Before doing this there are certain prerequisites that needs to be taken care, s
   &emsp; &emsp; &emsp; &emsp; &emsp; No of executors required? _<1> or <2> or <n>_ <br />
 > &emsp; &emsp; &emsp; &emsp; &emsp; Specify full path for configuring node? _eg. C:\Users\admin\Documents=> <path>_ <br />
 
-**Logs: ** <br />
-After successfull first attempt of launching JNLP should throw the below log message in a Java Console - Agent for [node name]
+**Logs:** <br />
+> After successfull first attempt of launching JNLP should throw the below log message in a Java Console - Agent for [node name]
 ```
 Java Web Start 11.251.2.08
 Using JRE version 1.8.0_251-b08 Java HotSpot(TM) Client VM
