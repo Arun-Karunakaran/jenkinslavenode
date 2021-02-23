@@ -33,7 +33,7 @@ Before doing this there are certain prerequisites that needs to be taken care, s
 > &emsp; &emsp; &emsp; &emsp; &emsp; Specify full path for configuring node? _eg. C:\Users\admin\Documents=> <path>_ <br />
 
 **Logs:** <br />
-&nbsp; Java Console <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Java Console <br />
 Java Web Start 11.251.2.08
 Using JRE version 1.8.0_251-b08 Java HotSpot(TM) Client VM
 JRE expiration date: 8/17/20 12:00 AM
