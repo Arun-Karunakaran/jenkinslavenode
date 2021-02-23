@@ -61,5 +61,5 @@ curl -u %username%:%password% %URL%/computer/%nodename%/slave-agent.jnlp --outpu
 curl -u %username%:%password% %URL%/jnlpJars/slave.jar --output %outputdir%\slave.jar
 curl -u %username%:%password% %URL%/jnlpJars/jenkins-slave.exe --output %outputdir%\jenkins-slave.exe
 sleep 2
-start /WAIT /B %outputdir%\slave-agent.jnlp &&^
+start /WAIT /B javaws %outputdir%\slave-agent.jnlp &&^
 sleep 10
