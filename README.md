@@ -31,6 +31,9 @@ Before doing this there are certain prerequisites that needs to be taken care, s
   &emsp; &emsp; &emsp; &emsp; &emsp; Tell the node name you want to create? _<nodename>_ <br />
   &emsp; &emsp; &emsp; &emsp; &emsp; No of executors required? _<1> or <2> or <n>_ <br />
 > &emsp; &emsp; &emsp; &emsp; &emsp; Specify full path for configuring node? _eg. C:\Users\admin\Documents=> <path>_ <br />
+
+> **Logs:** <br />
+
 	
 **Pros of using the configslavenodes.bat:**
 1. User will be able to instantly setup Jenkins slave nodes anytime.
