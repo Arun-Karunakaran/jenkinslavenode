@@ -23,6 +23,7 @@ Before doing this there are certain prerequisites that needs to be taken care, s
 - You can run the **configslavenodes.bat** script in an elevated command windows which will setup the remote machine over the Jenkins Server to run with admin privileges.
 
 > **Usage:** (either as windows user or loggedin user) <br />
+<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; configslavenodes.bat <br /> <br />
   **_Usage Prompt:_** <br />
   &emsp; &emsp; &emsp; &emsp; &emsp; Username for Jenkins login? _<username>_ <br />
