@@ -1,4 +1,4 @@
-### General Info:
+# General Info:
 Configuring a Jenkins slave node is an essential step in setting up a CI/CD automation process. <br />
 Before doing this there are certain prerequisites that needs to be taken care, such as: <br /> 
 >- ***Spinup node machine:*** Before adding a slave node to the Jenkins master we need to spinup and configure a slave node machine for performing the slave tasks.
